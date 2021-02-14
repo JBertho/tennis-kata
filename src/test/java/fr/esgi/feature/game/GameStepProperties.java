@@ -46,27 +46,27 @@ public class GameStepProperties {
 
 
 
-    @Then("{string} win the game")
+    @Then("{string} should win the game")
     public void playerWinTheGame(String name) {
         String result = game.getResult();
         String expectedString = "Victory of " + name;
         Assertions.assertEquals(expectedString, result);
     }
 
-    @Then("score is deuce")
+    @Then("score should be deuce")
     public void scoreIsDeuce() {
         String result = game.getResult();
         String expectedString = "Deuce";
         Assertions.assertEquals(expectedString, result);
     }
 
-    @Then("score is advantage for {string}")
+    @Then("score should be advantage for {string}")
     public void scoreIsAdvantageFor(String name) {
         String result = game.getResult();
         String expectedString = "Advantage for " + name;
         Assertions.assertEquals(expectedString, result);
     }
-    @Then("score is {string}")
+    @Then("score should be {string}")
     public void currentScoreIs(String currentScore) {
         String result = game.getResult();
         Assertions.assertEquals(currentScore, result);

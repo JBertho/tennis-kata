@@ -4,7 +4,7 @@ Feature: Win a game
     And "Maxime" have "Forty"
     And "Jimmy" have "Fifteen"
     When "Maxime" score a point
-    Then "Maxime" win the game
+    Then "Maxime" should win the game
 
 
   Scenario: Win a game when score is deuce
@@ -12,6 +12,6 @@ Feature: Win a game
     And "Maxime" have "Forty"
     And "Jimmy" have "Forty"
     When "Maxime" score two points in a row
-    Then "Maxime" win the game
+    Then "Maxime" should win the game
 
 
